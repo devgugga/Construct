@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  postgres:
+    restart: "always"
+    image: "postgres:latest"
+    environment:
+      - POSTGRES_USER=construct
+      - POSTGRES_PASSWORD=@Construct64
+      - POSTGRES_DB=construct-postgres
+    ports:
+      - "5432:5432"
