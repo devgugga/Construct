@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="container d-flex justify-content-center ">
+        <form action="{% url 'register_seller' %}" method="POST"
+              class="d-flex justify-content-center flex-column">
+            {% csrf_token %}
+            <label>
+                Nome
+                <input type="text" placeholder="Digite o Nome..." name="username" class="form-control">
+            </label>
+            <label>
+                Sobre Nome
+                <input type="text" placeholder="Digte o Sobre Nome..." name="surname" class="form-control">
+            </label>
+            <label>
+                E-mail
+                <input type="email" placeholder="Digite o E-mail..." name="email" class="form-control"/>
+            </label>
+            <label>
+                Senha
+                <input type="password" placeholder="Digite a Senha..." name="password" class="form-control">
+            </label>
+            <input type="submit" class="btn btn-success align-self-center ">
+        </form>
+    </div>
+{% endblock %}
